@@ -10,23 +10,14 @@ import Combine
 import AppKit
 
 class OCRViewModel: ObservableObject {
-
     @Published var selectedImage: NSImage?
     @Published var result: OCRResult?
     @Published var isLoading = false
 
-    private let service: OCRServiceProtocol
-
-    // ✅ Default + injectable initializer
-    init(service: OCRServiceProtocol = OCRService()) {
-        self.service = service
-    }
+    private let service = OCRService()
 
     func extractText() {
-        guard let image = selectedImage else {
-            result = nil
-            return
-        }
+        guard let image = selectedImage else { return }
 
         isLoading = true
 
@@ -43,33 +34,4 @@ class OCRViewModel: ObservableObject {
     }
 }
 
- 
-
-//class OCRViewModel: ObservableObject {
-//
-//    @Published var selectedImage: NSImage?
-//    @Published var extractedText = "Upload an image to start OCR"
-//    @Published var isLoading = false
-//
-//    private let service: OCRServiceProtocol
-//
-//    init(service: OCRServiceProtocol = OCRService()) {
-//        self.service = service
-//    }
-//
-//    func extractText() {
-//        guard let image = selectedImage else {
-//            extractedText = "Please upload an image first"
-//            return
-//        }
-//
-//        isLoading = true
-//        service.extractText(from: image) { [weak self] result in
-//            DispatchQueue.main.async {
-//                self?.extractedText = result
-//                self?.isLoading = false
-//            }
-//        }
-//    }
-//}
 

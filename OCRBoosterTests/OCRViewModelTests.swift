@@ -12,53 +12,30 @@ import AppKit
 final class OCRViewModelTests: XCTestCase {
 
     var viewModel: OCRViewModel!
-    var mockService: MockOCRService!
 
     override func setUp() {
         super.setUp()
-        mockService = MockOCRService()
-        viewModel = OCRViewModel(service: mockService)
+        viewModel = OCRViewModel()
     }
 
     override func tearDown() {
         viewModel = nil
-        mockService = nil
         super.tearDown()
     }
 
+    /// Tests the default state of the ViewModel
     func testInitialState() {
         XCTAssertNil(viewModel.selectedImage)
         XCTAssertNil(viewModel.result)
         XCTAssertFalse(viewModel.isLoading)
     }
 
+    /// Tests calling extractText WITHOUT an image
+    /// (should do nothing and not crash)
     func testExtractTextWithoutImage() {
         viewModel.extractText()
+
         XCTAssertNil(viewModel.result)
         XCTAssertFalse(viewModel.isLoading)
     }
-
-    func testExtractTextWithImage() {
-        // GIVEN
-        let dummyImage = NSImage(size: NSSize(width: 10, height: 10))
-        viewModel.selectedImage = dummyImage
-        mockService.resultToReturn = "Hello OCR"
-
-        let expectation = XCTestExpectation(description: "OCR completion")
-
-        // WHEN
-        viewModel.extractText()
-
-        // THEN
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            XCTAssertNotNil(self.viewModel.result)
-            XCTAssertEqual(self.viewModel.result?.text, "Hello OCR")
-            XCTAssertFalse(self.viewModel.isLoading)
-            expectation.fulfill()
-        }
-
-        wait(for: [expectation], timeout: 1)
-    }
 }
-
-

@@ -54,15 +54,6 @@ struct ContentView: View {
                             }
                         }
                         
-//                        Button("Test Crash") {
-//                            Crashlytics.crashlytics().log("User tapped test crash")
-//                            fatalError("Test crash from OCRBooster")
-//                        }
-
-//                       TextEditor(text: $viewModel.extractedText)
-//                            .font(.system(.body, design: .monospaced))
-//                            .frame(minHeight: 300)
-                        
                         VStack(alignment: .leading, spacing: 12) {
 
                             if let result = viewModel.result {
