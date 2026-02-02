@@ -7,17 +7,26 @@
 
 import SwiftUI
 import Combine
+import AppKit
 
- 
 class OCRViewModel: ObservableObject {
+
     @Published var selectedImage: NSImage?
     @Published var result: OCRResult?
     @Published var isLoading = false
 
-    private let service = OCRService()
+    private let service: OCRServiceProtocol
+
+    // ✅ Default + injectable initializer
+    init(service: OCRServiceProtocol = OCRService()) {
+        self.service = service
+    }
 
     func extractText() {
-        guard let image = selectedImage else { return }
+        guard let image = selectedImage else {
+            result = nil
+            return
+        }
 
         isLoading = true
 
@@ -33,6 +42,7 @@ class OCRViewModel: ObservableObject {
         }
     }
 }
+
  
 
 //class OCRViewModel: ObservableObject {

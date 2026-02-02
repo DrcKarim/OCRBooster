@@ -8,12 +8,11 @@
 import AppKit
 @testable import OCRBooster
 
-final class MockOCRService: OCRServiceProtocol {
+class MockOCRService: OCRServiceProtocol {
 
-    var resultToReturn = "Mock OCR Result"
+    var resultToReturn: String = ""
 
-    func extractText(from image: NSImage,
-                     completion: @escaping (String) -> Void) {
+    func extractText(from image: NSImage, completion: @escaping (String) -> Void) {
         completion(resultToReturn)
     }
 }

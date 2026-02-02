@@ -28,28 +28,31 @@ final class OCRViewModelTests: XCTestCase {
 
     func testInitialState() {
         XCTAssertNil(viewModel.selectedImage)
-        XCTAssertEqual(viewModel.extractedText, "Upload an image to start OCR")
+        XCTAssertNil(viewModel.result)
         XCTAssertFalse(viewModel.isLoading)
     }
 
     func testExtractTextWithoutImage() {
         viewModel.extractText()
-        XCTAssertEqual(viewModel.extractedText, "Please upload an image first")
+        XCTAssertNil(viewModel.result)
         XCTAssertFalse(viewModel.isLoading)
     }
 
     func testExtractTextWithImage() {
+        // GIVEN
         let dummyImage = NSImage(size: NSSize(width: 10, height: 10))
         viewModel.selectedImage = dummyImage
+        mockService.resultToReturn = "Hello OCR"
 
         let expectation = XCTestExpectation(description: "OCR completion")
 
-        mockService.resultToReturn = "Hello OCR"
-
+        // WHEN
         viewModel.extractText()
 
+        // THEN
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            XCTAssertEqual(self.viewModel.extractedText, "Hello OCR")
+            XCTAssertNotNil(self.viewModel.result)
+            XCTAssertEqual(self.viewModel.result?.text, "Hello OCR")
             XCTAssertFalse(self.viewModel.isLoading)
             expectation.fulfill()
         }
@@ -57,3 +60,5 @@ final class OCRViewModelTests: XCTestCase {
         wait(for: [expectation], timeout: 1)
     }
 }
+
+
