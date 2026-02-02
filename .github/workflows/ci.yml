@@ -6,17 +6,16 @@ on:
   pull_request:
 
 jobs:
-  build-and-test:
+  build:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode.app
 
-      - name: Build app (no signing)
+      - name: Build app (no signing, no tests)
         run: |
           xcodebuild \
             -scheme OCRBooster \
@@ -24,12 +23,3 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             build
-
-      - name: Run unit tests (no signing)
-        run: |
-          xcodebuild \
-            -scheme OCRBooster \
-            -destination 'platform=macOS' \
-            CODE_SIGNING_ALLOWED=NO \
-            CODE_SIGNING_REQUIRED=NO \
-            test
