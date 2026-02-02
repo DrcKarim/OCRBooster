@@ -16,16 +16,20 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode.app
 
-      - name: Build app
+      - name: Build app (no signing)
         run: |
           xcodebuild \
             -scheme OCRBooster \
             -destination 'platform=macOS' \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
             build
 
-      - name: Run unit tests
+      - name: Run unit tests (no signing)
         run: |
           xcodebuild \
             -scheme OCRBooster \
             -destination 'platform=macOS' \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
             test
