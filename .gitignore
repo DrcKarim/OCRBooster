@@ -1,0 +1,5 @@
+# Firebase / Google secrets
+GoogleService-Info.plist
+**/GoogleService-Info.plist
+Resources/GoogleService-Info.plist
+.DS_Store
