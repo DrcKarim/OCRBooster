@@ -1,3 +1,16 @@
+# Important Firebase setup required
+
+This project uses Firebase (Crashlytics).
+
+After cloning the repository:
+1. Create a Firebase project
+2. Add a macOS app
+3. Download `GoogleService-Info.plist`
+4. Place it in `OCRBooster/Resources`
+5. Build & run
+
+==> Firebase keys are intentionally not committed for security reasons.
+
 # OCRBooster
 
 A macOS application built with SwiftUI that extracts text from images using Apple's Vision framework for optical character recognition (OCR).
