@@ -6,14 +6,14 @@
 //
 
 import SwiftUI
-import Firebase
+// import Firebase
 
 @main
 struct OCRBoosterApp: App {
     
     init() {
        //  NSApplicationCrashOnExceptions = true
-         FirebaseApp.configure()
+        // FirebaseApp.configure()
      }
 
     

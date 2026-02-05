@@ -6,11 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		8A3CFC432F2FB90C00A165C4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8A3CFC422F2FB90C00A165C4 /* FirebaseAnalytics */; };
-		8A3CFC452F2FB90C00A165C4 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8A3CFC442F2FB90C00A165C4 /* FirebaseCrashlytics */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		8A3CFBDF2F2F8AED00A165C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -87,8 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A3CFC432F2FB90C00A165C4 /* FirebaseAnalytics in Frameworks */,
-				8A3CFC452F2FB90C00A165C4 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,8 +156,6 @@
 			);
 			name = OCRBooster;
 			packageProductDependencies = (
-				8A3CFC422F2FB90C00A165C4 /* FirebaseAnalytics */,
-				8A3CFC442F2FB90C00A165C4 /* FirebaseCrashlytics */,
 			);
 			productName = OCRBooster;
 			productReference = 8A3CFBD12F2F8AEC00A165C4 /* OCRBooster.app */;
@@ -246,7 +237,6 @@
 			mainGroup = 8A3CFBC82F2F8AEC00A165C4;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				8A3CFC412F2FB90C00A165C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8A3CFBD22F2F8AEC00A165C4 /* Products */;
@@ -287,17 +277,13 @@
 /* Begin PBXShellScriptBuildPhase section */
 		8A3CFC482F2FBAA800A165C4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
-				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleService-Info.plist",
-				"${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}",
 			);
 			outputFileListPaths = (
 			);
@@ -305,7 +291,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ \"$CI\" = \"true\" ]; then\n  echo \"Skipping Crashlytics in CI\"\n  exit 0\nfi\n\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -651,30 +637,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		8A3CFC412F2FB90C00A165C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 12.8.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8A3CFC422F2FB90C00A165C4 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8A3CFC412F2FB90C00A165C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		8A3CFC442F2FB90C00A165C4 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8A3CFC412F2FB90C00A165C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8A3CFBC92F2F8AEC00A165C4 /* Project object */;
 }

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import FirebaseCrashlytics
+//import FirebaseCrashlytics
 
 struct ContentView: View {
     @StateObject private var viewModel = OCRViewModel()
