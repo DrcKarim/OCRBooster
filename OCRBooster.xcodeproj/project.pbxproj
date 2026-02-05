@@ -14,19 +14,11 @@
 			remoteGlobalIDString = 8A3CFBD02F2F8AEC00A165C4;
 			remoteInfo = OCRBooster;
 		};
-		8A3CFBE92F2F8AED00A165C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8A3CFBC92F2F8AEC00A165C4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8A3CFBD02F2F8AEC00A165C4;
-			remoteInfo = OCRBooster;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8A3CFBD12F2F8AEC00A165C4 /* OCRBooster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCRBooster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3CFBDE2F2F8AED00A165C4 /* OCRBoosterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCRBoosterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A3CFBE82F2F8AED00A165C4 /* OCRBoosterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCRBoosterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -92,13 +84,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A3CFBE52F2F8AED00A165C4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -123,7 +108,6 @@
 			children = (
 				8A3CFBD12F2F8AEC00A165C4 /* OCRBooster.app */,
 				8A3CFBDE2F2F8AED00A165C4 /* OCRBoosterTests.xctest */,
-				8A3CFBE82F2F8AED00A165C4 /* OCRBoosterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,26 +168,6 @@
 			productReference = 8A3CFBDE2F2F8AED00A165C4 /* OCRBoosterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8A3CFBE72F2F8AED00A165C4 /* OCRBoosterUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8A3CFBF82F2F8AED00A165C4 /* Build configuration list for PBXNativeTarget "OCRBoosterUITests" */;
-			buildPhases = (
-				8A3CFBE42F2F8AED00A165C4 /* Sources */,
-				8A3CFBE52F2F8AED00A165C4 /* Frameworks */,
-				8A3CFBE62F2F8AED00A165C4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8A3CFBEA2F2F8AED00A165C4 /* PBXTargetDependency */,
-			);
-			name = OCRBoosterUITests;
-			packageProductDependencies = (
-			);
-			productName = OCRBoosterUITests;
-			productReference = 8A3CFBE82F2F8AED00A165C4 /* OCRBoosterUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -218,10 +182,6 @@
 						CreatedOnToolsVersion = 26.0.1;
 					};
 					8A3CFBDD2F2F8AED00A165C4 = {
-						CreatedOnToolsVersion = 26.0.1;
-						TestTargetID = 8A3CFBD02F2F8AEC00A165C4;
-					};
-					8A3CFBE72F2F8AED00A165C4 = {
 						CreatedOnToolsVersion = 26.0.1;
 						TestTargetID = 8A3CFBD02F2F8AEC00A165C4;
 					};
@@ -245,7 +205,6 @@
 			targets = (
 				8A3CFBD02F2F8AEC00A165C4 /* OCRBooster */,
 				8A3CFBDD2F2F8AED00A165C4 /* OCRBoosterTests */,
-				8A3CFBE72F2F8AED00A165C4 /* OCRBoosterUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,13 +218,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8A3CFBDC2F2F8AED00A165C4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8A3CFBE62F2F8AED00A165C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -310,13 +262,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A3CFBE42F2F8AED00A165C4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -324,11 +269,6 @@
 			isa = PBXTargetDependency;
 			target = 8A3CFBD02F2F8AEC00A165C4 /* OCRBooster */;
 			targetProxy = 8A3CFBDF2F2F8AED00A165C4 /* PBXContainerItemProxy */;
-		};
-		8A3CFBEA2F2F8AED00A165C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8A3CFBD02F2F8AEC00A165C4 /* OCRBooster */;
-			targetProxy = 8A3CFBE92F2F8AED00A165C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -559,44 +499,6 @@
 			};
 			name = Release;
 		};
-		8A3CFBF92F2F8AED00A165C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9994G9A7AV;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.OCR.Swift.OCRBoosterUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = OCRBooster;
-			};
-			name = Debug;
-		};
-		8A3CFBFA2F2F8AED00A165C4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9994G9A7AV;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.OCR.Swift.OCRBoosterUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = OCRBooster;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -623,15 +525,6 @@
 			buildConfigurations = (
 				8A3CFBF62F2F8AED00A165C4 /* Debug */,
 				8A3CFBF72F2F8AED00A165C4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8A3CFBF82F2F8AED00A165C4 /* Build configuration list for PBXNativeTarget "OCRBoosterUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8A3CFBF92F2F8AED00A165C4 /* Debug */,
-				8A3CFBFA2F2F8AED00A165C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
