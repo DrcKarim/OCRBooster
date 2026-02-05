@@ -1,42 +1,15 @@
-# =========================
-# macOS
-# =========================
-.DS_Store
 
-# =========================
-# Xcode
-# =========================
+.DS_Store
 DerivedData/
 .build/
-
-# User-specific Xcode files
 xcuserdata/
 *.xcuserstate
-
-# Xcode workspace user data
 **/*.xcuserstate
-
-# =========================
-# Swift Package Manager
-# =========================
 .build/
 Packages/
 SourcePackages/
-
-# =========================
-# Logs
-# =========================
 *.log
-
-# =========================
-# Firebase / Google secrets
-# =========================
 GoogleService-Info.plist
 **/GoogleService-Info.plist
 Resources/GoogleService-Info.plist
 
-# =========================
-# Environment / Secrets
-# =========================
-.env
-.env.*
